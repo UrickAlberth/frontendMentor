@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Desserts</h1>
+    <div class="cart-icon">
+      <a href="#cart">
+      <img src="assets/images/icon-add-to-cart.svg" alt="Carrinho">
+      <span id="cart-count">0</span>
+    </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Lista de Produtos -->
+    <section id="product-list" class="product-list">
+
+    </section>
+
+    <!-- Carrinho -->
+    <aside id="cart" class="cart" style="display: block;">
+      <h2>Your Cart (<span id="cart-count2">0</span>)</h2>
+      <div id="cart-items" class="cart-items">
+
+        <!-- Os itens do carrinho serão adicionados aqui via JavaScript -->
+      </div>
+      <div id="empty" class="cart-items">
+        <img src="assets/images/illustration-empty-cart.svg">
+        <p>Your added items will appear here</p>
+      </div>
+      <div class="cart-total">
+        <div id="area_finalizar" class="hidden">
+          <p>Order Total <span id="total-price">R$ 0,00</span></p>
+          <p><img src="assets/images/icon-carbon-neutral.svg">This is a <strong> carbon-neutral </strong> delivery</p>
+          <button onclick="finalizeOrder()">Confirm Order</button>
+        </div>
+      </div>
+    </aside>
+    <div id="order_confirmed" class="order_confirmed hidden">
+      <img src="assets/images/icon-order-confirmed.svg">
+      <h1>Order Confirmed</h1>
+      <p>We hope you enjoy your food!</p>
+      <br>
+      <div class="confirmed-items">
+
+      </div>
+      <button onclick="startNewOrder()">Start New Order</button>
+    </div>
+    <div id="modal-overlay" class="modal-overlay hidden"></div>
+  </main>
+
+  <script src="script.js"></script>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
